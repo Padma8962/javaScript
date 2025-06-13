@@ -22,3 +22,13 @@ function add(a, b) {
   return a + b;
 }
 console.log(add(2, 3));
+
+
+// stack and heap memory
+// Stack : used for primitive and Heap memory is used for non primitive
+// we get copy of variable declared in stack but we get refernce of original value of variable declared in heap
+
+let youtubeChannel = "padmaja"
+let anotherName = youtubeChannel
+console.log(youtubeChannel)
+console.log(anotherName)
