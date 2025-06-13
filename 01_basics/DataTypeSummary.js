@@ -26,9 +26,23 @@ console.log(add(2, 3));
 
 // stack and heap memory
 // Stack : used for primitive and Heap memory is used for non primitive
-// we get copy of variable declared in stack but we get refernce of original value of variable declared in heap
+// we get copy of variable declared in stack but we get refernce of original value of variable declared i/n heap
 
+
+// stack example
 let youtubeChannel = "padmaja"
 let anotherName = youtubeChannel
 console.log(youtubeChannel)
 console.log(anotherName)
+
+// heap example
+let user={
+  email :"padmaja.sharma0073@gmail.com",
+  password : "Padma@8986"
+}
+
+let userTwo = user
+userTwo.email ="MohitThakre8686@gmail.com"
+
+console.log(user)
+console.log(userTwo)
