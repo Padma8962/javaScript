@@ -19,3 +19,17 @@
 // document.querySelector('#title') 
 // document.querySelector('.heading')
 
+const myul = document.querySelector('ul')
+const turnGreen = myul.querySelector('li')
+turnGreen.style.backgroundColor ='green'
+
+//differnce between Array and NodeList and HTMLCollection
+const liList = document.querySelectorAll('li') //this will create a listNode
+liList[0].style.color ='green'
+
+const tempClassList = document.getElementsByClassName('list-item')
+// if we have to use map function on this first we have to convert into array
+const myConvertedArray = Array.from(tempClassList)
+myConvertedArray.forEach(function(li){
+    li.style.color='orange'
+})
