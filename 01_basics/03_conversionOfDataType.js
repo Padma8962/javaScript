@@ -16,6 +16,8 @@ let name = "padmaja"
 
  console.log("1"+2+2) //122
  console.log(1+2+"2") //32
+ console.log(true+true) //2
+ console.log(+true) //1
 
  //neat code ,not confusing code, readable code
  let n = 100
@@ -40,6 +42,10 @@ console.log(x)
 console.log(null>0)
 console.log(null==0)
 console.log(null>=0)
+// == and > < >= <= works differently 
+// Comparsion convert null to a number and trest it as 0
+// that's why (3) null >= 0 is true and (1) null>0 is false
 
 // === strict check it checks value as well as its datatype
+console.log("2" === 2)
 console.log("2" == 2)
