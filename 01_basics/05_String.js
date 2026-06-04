@@ -1,6 +1,6 @@
 // string can be declared using single as well as double qoutes
 // concatnate string
-// string interpolation using backticks
+// string interpolation using backticks(``)
 
 const name ="padmaja"
 const age = 23
@@ -15,3 +15,10 @@ const email = new String("padmaja.sharma0073@gmail.com")
 // trim() remove starting and endspace and replace()
 // includes() return boolean value whether value is in string or not
 // split()
+
+console.log(email[0]);
+console.log(email.__proto__);
+console.log(email.length);
+
+let substr = email.substring(0,4)
+console.log(substr);
