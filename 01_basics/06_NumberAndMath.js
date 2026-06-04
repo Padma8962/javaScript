@@ -11,7 +11,7 @@ const otherNumber = 1000
 console.log(otherNumber.toPrecision(3))
 
 const hundreds = 1000000000000
-console.log(hundreds.toLocaleString('en-IN'))
+console.log(hundreds.toLocaleString('en-IN')) //indian representation 
 // MAX_VALUE,MIN_VALUE
 
 

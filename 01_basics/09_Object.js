@@ -7,7 +7,7 @@ const mySym = Symbol("key1")
 const jsUser = {
     name : "padmaja",
     age : 23,
-    [mySym] : "Symbol",
+    [mySym] : "Symbol", //mySym : "Symbol" ese nhi use kr sakte hai
     location : "rajgarh",
     isLoggedin : true,
     loggedinDays : ["Monday","Thrusday"]
@@ -20,7 +20,7 @@ console.log(jsUser.greeting())
 //update krne k liye values ko overwrite kr sakte hai
 Object.freeze(jsUser) //ab update nhi kr sakte values ko
 console.log(jsUser.name) //not a good practice
-console.log(jsUser["name"])
+console.log(jsUser["name"]) //good practice
 console.log(jsUser[mySym])
 
 
