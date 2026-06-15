@@ -25,17 +25,19 @@
     // }
     //is onclick m bhi problem ho sakti hai isliye aur features bhi kam deta hai hum eventListerns laga sakte hai
 
+    // bht saare events like click, mouseover, mouseout, keydown, keyup, load, scroll, resize, change, submit, focus, blur yeh sab listen kr sakta hia(best practice hai ki event listener lagaye)
     // document.getElementById('owl').addEventListener(function(){
     //     alert('owl')
-    // },false) 
+    // },false)  //false is default value for event capturing, true is for event bubbling, event capturing m parent se child ko event trigger krta hai aur event bubbling m child se parent ko event trigger krta hai
 
+    // following another methods are also there to attach events
     // attachEvent()
     // jQuery - on
 
-    // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
+    // type, timestamp, defaultPrevented(default behaviour ko prevent krne ke liye), eventPhase, bubbles, cancelable, view, detail,
+    // target, toElement, srcElement, currentTarget
+    // clientX(position relative to the viewport), clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode(keyboard event ke liye), charCode, which
 
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
@@ -43,7 +45,7 @@
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
+    //     e.stopPropagation() // event bubbling (inside se outside)ko stop krne ke liye, agar isko comment kr diya to ul ka event bhi trigger hoga jab owl pe click karenge
     // }, false)
     
     // document.getElementById('google').addEventListener('click',function(e){
@@ -54,7 +56,7 @@
    
     
     document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
+        console.log(e.target.tagName); //target se pata chalta hai ki click kaha hua hai, tagName se pata chalta hai ki click kis element pe hua hai
         if (e.target.tagName === 'IMG') {
             console.log(e.target.id);
             let removeIt = e.target.parentNode

@@ -11,6 +11,7 @@
     </ul>
 </body>
 <script>
+    // using innerHTML we have to traverse whole tree to add new element so this is node optimized
     function addLanguage(langName){
         const li = document.createElement('li') //const is a scope variable
         li.innerHTML = '${langName}'
@@ -19,6 +20,7 @@
     addLanguage("python")
     addLanguage("Java")
 
+    // using createTextNode we create a new Node and add to the selectedQuery so in this no tree traversing is done therefore it is optimied
     function addOptiLanguage(LangName){
         const li = document.createElement(li)
         li.appendChild(document.createTextNode(langName))
