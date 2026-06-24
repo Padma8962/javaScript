@@ -1,13 +1,13 @@
 // The Promise Object represent the eventual completion or failure of an asynchronous operation and its resulting value
 // const PromiseOne = new Promise()
-//  //new keyword gives instance 
+// new keyword gives instance 
 // the above code creates a promise
-const PromiseOne = new Promise(function(resolve,reject){
+const PromiseOne = new Promise(function(resolve,reject){ //resolve and reject are callback functions
     //do an async task
     //DB calls,cryptography,network
     setTimeout(function(){
         console.log('Async task is complete')
-        resolve()
+        resolve() //resolve() is called when the async task is completed successfully 
     },1000)
 })
 PromiseOne.then(function(){
@@ -78,3 +78,4 @@ async function consumePromiseFive(){
 consumePromiseFive()
 
 
+// Promise.all() method takes an iterable of promises as input and returns a single Promise that resolves to an array of the results of the input promises. The returned promise will resolve when all of the input promises have resolved, or it will reject if any of the input promises reject.
