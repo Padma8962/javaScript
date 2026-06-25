@@ -28,7 +28,7 @@ Array.prototype.heyHitesh = function(){
 heroPower.hitesh()
 myHeros.hitesh()
 myHeros.heyHitesh()
-heroPower.heyHitesh()
+// heroPower.heyHitesh() //heroPower object hai toh vo array method ko access nahi kar sakta
 
 // inheritance
 
@@ -48,13 +48,17 @@ const TeachingSupport = {
 const TASupport = {
     makeAssignment: 'JS assignment',
     fullTime: true,
-    __proto__: TeachingSupport
+    __proto__: TeachingSupport //linking TeachingSupport to TASupport using __proto__ property
 }
 
-Teacher.__proto__ = User
+Teacher.__proto__ = User //this is another method to link prototype
 
 // modern syntax
-Object.setPrototypeOf(TeachingSupport, Teacher)
+Object.setPrototypeOf(TeachingSupport, Teacher) //this is thrid method to link prototype
+
+console.log(TASupport.isAvailable);
+console.log(TASupport.makeVideo);
+console.log(TASupport.name);
 
 let anotherUsername = "ChaiAurCode     "
 
