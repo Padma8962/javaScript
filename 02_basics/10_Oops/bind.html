@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React";
+            this.server = "https://localhost:3000";
+
+            // requirment
+            document.querySelector('#btn').addEventListener('click', this.handleClick.bind(this)); //bind(this) is used to bind the current context of the class to the handleClick method
+            // why not call? because we are passing the reference of the method to the event listener, not calling it. If we call it, it will execute immediately and not when the button is clicked.
+        }
+        handleClick(){
+            console.log("Button Clicked");
+            console.log(this.server);
+        }
+    }
+    const app = new React();
+</script>
+</html>
